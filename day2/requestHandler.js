@@ -7,11 +7,23 @@ function start(response) {
 
     // html 파일 읽어서 응답하기
     fs.readFile('./index.html', function(error,data)  {
-        // 응답
-        response.statusCode = 200;
-        response.setHeader('Content-Type', 'text/html');
-        //response.end('Hello Start');
-        response.end(data);
+
+        if(error) {
+
+            response.statusCode = 500;
+            response.setHeader('Content-Type', 'text/html');
+            response.end('Error 발생: ' + error.toString());
+
+        } else {
+
+            // 응답
+            response.statusCode = 200;
+            response.setHeader('Content-Type', 'text/html');
+            //response.end('Hello Start');
+            response.end(data);
+
+        }
+
     });
 
 }
