@@ -1,0 +1,5 @@
+const server = require('./server');
+//const database = require('./database');
+
+//server.start(database.database);
+server.start();

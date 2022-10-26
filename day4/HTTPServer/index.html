@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <!-- 헤더 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>NodeJS 서버</title>
+        <!-- <link rel = "icon" href = ""> -->
+    </head>
+    <body>
+        <h1>NodeJS 공부용 서버입니다.</h1>
+        <h3>반갑습니다.</h3>
+
+        <!-- Ctrl + /. 이미 업로드를 위한 폼(Form) 태그 post 민감한 데이터, 큰 데이터일 경우-->
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <input type="submit" value="파일 업로드">
+        </form>
+    </body>
+</html>
