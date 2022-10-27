@@ -29,7 +29,7 @@ function get(id) {
 //데이터 추가 함수.
 function insert(data) {
     // 데이터 id 값 추가.
-    data.id = cout++;
+    data.id = count++;
     // 배열에 새로운 데이터 추가
     storage.push(data);
     // 추가한 데이터 반환.
@@ -41,7 +41,7 @@ function deleteData(id) {
     id = typeof(id) === 'string' ? Number(id) : id;
 
      //  데이터 삭제
-     for (let ix = 0; ix < storage.length(); ++ix) {
+     for (let ix = 0; ix < storage.length; ++ix) {
         // 같은 id를 가진 데이터 검색
         if (storage[ix].id === id) {
             // 데이터 삭제
